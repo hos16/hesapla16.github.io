@@ -1,11 +1,18 @@
     form {
-        background-color: rgba(238, 221, 215, 0.959);
-        width: 700px;
-        height: 1300px;
+        max-width: 700px;
+        height: 1600px;
+    }
+    
+    div#myDiv {
+        background-color: rgba(90, 173, 240, 0.897);
+        position: relative;
+        margin: 0;
+        max-width: 750px;
+        z-index: 0;
     }
     
     body {
-        background-color: rgba(241, 226, 226, 0.932);
+        background-image: url("2.jpg");
     }
     
     input {
@@ -18,24 +25,23 @@
     }
     
     th#boya {
-        background-color: #9F9FA0;
+        background-color: #5d9feb;
         color: white;
     }
     
     tr#boya {
-        background-color: #9F9FA0;
+        background-color: #5d9feb;
         color: white;
     }
     
     span#span {
         color: white;
-        background-color: #9F9FA0;
     }
     
     h1 {
-        background-color: #656565;
+        background-color: #5d9feb;
         color: white;
-        width: 780px;
+        max-width: 680px;
         height: 60px;
         padding-top: 17px;
         border-radius: 5px;
@@ -43,9 +49,9 @@
     
     h2 {
         color: white;
-        background-color: #656565;
+        background-color: #5d9feb;
         height: 40px;
-        width: 695px;
+        max-width: 680px;
         border-radius: 5px;
         padding-top: 12px;
     }

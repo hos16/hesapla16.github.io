@@ -143,6 +143,54 @@ function hesaplama() {
 
 function kontrol() {
     var x, y, z, t, o, p, r, s, t, u, v, m, n, q, c;
+    x = document.getElementById('tyt-t-d').value;
+    y = document.getElementById('tyt-s-d').value;
+    z = document.getElementById('tyt-m-d').value;
+    t = document.getElementById('tyt-f-d').value;
+    o = document.getElementById('yks-m-d').value;
+    p = document.getElementById('yks-f-d').value;
+    r = document.getElementById('yks-k-d').value;
+    u = document.getElementById('yks-b-d').value;
+    n = document.getElementById('yks-e-d').value;
+    m = document.getElementById('yks-tar-1-d').value;
+    c = document.getElementById('yks-cog-1-d').value;
+    q = document.getElementById('yks-tar-2-d').value;
+    v = document.getElementById('yks-cog-2-d').value;
+    s = document.getElementById('yks-fel-d').value;
+    a = document.getElementById('yks-din-d').value;
+    b = document.getElementById('yks-d-d').value;
+    if (40 < x)
+        document.getElementById('tyt-t-d').value = 40;
+    if (20 < y)
+        document.getElementById('tyt-s-d').value = 20;
+    if (40 < z)
+        document.getElementById('tyt-m-d').value = 40;
+    if (20 < t)
+        document.getElementById('tyt-f-d').value = 20;
+    if (40 < o)
+        document.getElementById('yks-m-d').value = 40;
+    if (14 < p)
+        document.getElementById('yks-f-d').value = 14;
+    if (13 < r)
+        document.getElementById('yks-k-d').value = 13;
+    if (13 < u)
+        document.getElementById('yks-b-d').value = 13;
+    if (24 < n)
+        document.getElementById('yks-e-d').value = 24;
+    if (10 < m)
+        document.getElementById('yks-tar-1-d').value = 10;
+    if (6 < c)
+        document.getElementById('yks-cog-1-d').value = 6;
+    if (11 < q)
+        document.getElementById('yks-tar-2-d').value = 11;
+    if (11 < v)
+        document.getElementById('yks-cog-2-d').value = 11;
+    if (12 < s)
+        document.getElementById('yks-fel-d').value = 12;
+    if (6 < a)
+        document.getElementById('yks-din-d').value = 6;
+    if (80 < b)
+        document.getElementById('yks-d-d').value = 80;
 }
 var kont;
 kont = setInterval(kontrol, 200)

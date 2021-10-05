@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TTAL 10.SINIF TAKTİR TEŞEKKÜR HESAPLAMA</title>
     <meta name="description" content="10/E puan hesaplama motoru">
-    <script src="js.js"></script>
+    <script src="hesapla.js"></script>
+    <script src="takir.js"></script>
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -16,12 +17,15 @@
     <meta name="keywords" content="oguzhanaktas 10/E taktir tesekkür hesaplama ttal ttal10e asure">
     <link rel="stylesheet" href="taktir.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="taktirstyle.css">
     <!-----------------------------------------------------güzel arkaplan--------------------------------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
     <!-------------------------------------------------------------güzel arkaplan son-------------------------------------------------->
+
 </head>
 
 <body>
+
 
     <section class="banner" id="home">
         <div class="imgSidebar">
@@ -56,7 +60,7 @@
             <fieldset class="meb">
                 <div class="notlar" id="not"><em>NOT:</em> Bu hesaplama aracı 2021 - 2022 eğitim yılınna uyumlu olarak hazırlanmıştır.Boş bırakdığınız dersler "0" olarak alınacaktır.Notları virgülüne kadar girerseni %99.9 Doğru çıkacaktır.</div>
                 <ol>
-                    <li id="matematik"> <label for="matematikpuan"></label>Matematik :<input type="number" name="sinav1" id="sinav1" maxlength="6"><br/></li>
+                    <li id="matematik"> <label for="matematikpuan"></label>Matematik :<input type="number" class="mat" name="sinav1" id="sinav1" maxlength="6"><br/></li>
                     <li id="fizik"> <label for="fizikpuan"></label>Fizik :<input type="number" name="sinav2" id="sinav2" maxlength="6"><br/></li>
                     <li id="kimya"> <label for="kimyapuan"></label>Kimya :<input type="number" name="sinav3" id="sinav3" maxlength="6"><br/></li>
                     <li id="biyoloji"> <label for="biyolojipuan"></label>Biyoloji :<input type="number" name="sinav4" id="sinav4" maxlength="6"><br/></li>

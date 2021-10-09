@@ -6,120 +6,351 @@
     <meta http-equiv="X-UA-Comptible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TTAL 10.SINIF TAKTİR TEŞEKKÜR HESAPLAMA</title>
-    <meta name="description" content="10/E puan hesaplama motoru">
+    <meta name="description" content="ttal 10/E puan hesaplama motoru">
     <script src="hesapla.js"></script>
-    <script src="takir.js"></script>
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859">
     <META name="Copyright" content="Bu site 2022 ye kadar korunmaktadır.">
-    <meta name="keywords" content="oguzhanaktas 10/E taktir tesekkür hesaplama ttal ttal10e asure">
+    <meta name="keywords" content="ttalhesapla ttalhesap oguzhanaktas 10/E taktir tesekkür hesaplama ttal ttal10e asure">
     <link rel="stylesheet" href="taktir.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="taktirstyle.css">
-    <!-----------------------------------------------------güzel arkaplan--------------------------------------------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-    <!-------------------------------------------------------------güzel arkaplan son-------------------------------------------------->
+
+    <style>
+        /*-------------------------------------------------- -preloader----------------------------------------------*/
+        
+        .loading--circle {
+            background-color: black;
+            box-sizing: border-box;
+            border: solid 20px #373737;
+            border-radius: 50%;
+            width: 330px;
+            height: 330px;
+            overflow: hidden;
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/bg-loading-ekg4.gif) repeat-x 21px center #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-animation-name: buildloader;
+            -moz-animation-name: buildloader;
+            animation-name: buildloader;
+            -webkit-animation-duration: 0.5s;
+            -moz-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-timing-function: linear;
+            -moz-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -moz-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+        
+        @-webkit-keyframes buildloader {
+            from {
+                width: 0px;
+                height: 0px;
+                border-width: 1px;
+            }
+            to {
+                width: 330px;
+                height: 330px;
+                border-width: 20px;
+            }
+        }
+        
+        @-moz-keyframes buildloader {
+            from {
+                width: 0px;
+                height: 0px;
+                border-width: 1px;
+            }
+            to {
+                width: 330px;
+                height: 330px;
+                border-width: 20px;
+            }
+        }
+        
+        @keyframes buildloader {
+            from {
+                width: 0px;
+                height: 0px;
+                border-width: 1px;
+            }
+            to {
+                width: 330px;
+                height: 330px;
+                border-width: 20px;
+            }
+        }
+        
+        .heart {
+            position: absolute;
+            width: 130px;
+            left: 50%;
+            top: 50%;
+            margin-left: -58px;
+            margin-top: -102px;
+            -webkit-animation-name: heartbeat;
+            -moz-animation-name: heartbeat;
+            animation-name: heartbeat;
+            -webkit-animation-duration: 0.35s;
+            -moz-animation-duration: 0.35s;
+            animation-duration: 0.35s;
+            -webkit-animation-timing-function: ease;
+            -moz-animation-timing-function: ease;
+            animation-timing-function: ease;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        @-webkit-keyframes heartbeat {
+            0%,
+            100% {
+                -webkit-transform: scale(1);
+            }
+            50%,
+            67% {
+                -webkit-transform: scaleY(1.05);
+            }
+            70% {
+                -webkit-transform: scale(1.05);
+            }
+        }
+        
+        @-moz-keyframes heartbeat {
+            0%,
+            100% {
+                -moz-transform: scale(1);
+            }
+            50%,
+            67% {
+                -moz-transform: scaleY(1.05);
+            }
+            70% {
+                -moz-transform: scale(1.05);
+            }
+        }
+        
+        @keyframes heartbeat {
+            0%,
+            100% {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+            }
+            50%,
+            67% {
+                -webkit-transform: scaleY(1.05);
+                -moz-transform: scaleY(1.05);
+                -ms-transform: scaleY(1.05);
+                -o-transform: scaleY(1.05);
+                transform: scaleY(1.05);
+            }
+            70% {
+                -webkit-transform: scale(1.05);
+                -moz-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                -o-transform: scale(1.05);
+                transform: scale(1.05);
+            }
+        }
+        
+        .ekg--wipe {
+            position: absolute;
+            width: 300%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0.7) 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0.7) 100%);
+            -webkit-animation-name: ekgrunning;
+            -moz-animation-name: ekgrunning;
+            animation-name: ekgrunning;
+            -webkit-animation-duration: 1.4s;
+            -moz-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+            -webkit-animation-delay: 0.175s;
+            -moz-animation-delay: 0.175s;
+            animation-delay: 0.175s;
+            -webkit-animation-timing-function: ease;
+            -moz-animation-timing-function: ease;
+            animation-timing-function: ease;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        @-webkit-keyframes ekgrunning {
+            from {
+                left: -150%;
+            }
+            to {
+                left: 0%;
+            }
+        }
+        
+        @-moz-keyframes ekgrunning {
+            from {
+                left: -150%;
+            }
+            to {
+                left: 0%;
+            }
+        }
+        
+        @keyframes ekgrunning {
+            from {
+                left: -150%;
+            }
+            to {
+                left: 0%;
+            }
+        }
+        
+        div#loader {
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            overflow: none;
+            background: radial-gradient( #333, #000);
+            position: fixed;
+        }
+        
+        div#yuvarlak {
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            overflow: none;
+            position: fixed;
+            right: 0;
+            top: 330px;
+        }
+        /*----------------------------------------------------preloader son------------------------------------------*/
+    </style>
 
 </head>
 
-<body>
+<body onload="myFunction()" style="margin:0;" id="123">
 
-
-    <section class="banner" id="home">
-        <div class="imgSidebar">
-            <a href="#"><img src="logo.png"></a>
+    <!--------------------------------------preloader--------------------------------->
+    <div id="loader">
+        <div class="loading--circle" id="yuvarlak">
+            <div class="ekg--wipe"></div>
+            <a href="https://ttalhesapla.github.io/"><img class="heart" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/loading-heart.svg"></a>
         </div>
-        <div class="contentBx">
-            <div>
-                <h4><span>Hoşgeldin</span>, 10/E öğrencisi</h4>
-                <h2>Naber</h2>
-                <h4>Aşağıdan Taktir Teşekkür Hesaplama yapabilirsin.</h4><br>
-                <a href="#hesapla" class="btn">Hesapla</a>
+    </div>
+    <!---------------------------------------preloader---------------------------------->
+
+
+    <div id="myDiv">
+
+        <section class="banner" id="home">
+            <div class="imgSidebar">
+                <a href="#"><img src="logo.png"></a>
             </div>
-        </div>
-        <ul class="sci">
-            <li>
-                <a href=""><img src="facebook-logo-sticker-10107-6195-P-ORG.jpg" width="50px"></a>
-            </li>
-            <li>
-                <a href=""><img src="png-clipart-twitter-twitter-thumbnail.png" width="50px"></a>
-            </li>
-            <li>
-                <a href=""><img src="Instagram_logo_2016.svg.png" width="50px"></a>
-            </li>
-        </ul>
-    </section>
-
-
-
-    <section class="hesapla" id="hesapla">
-        <h4><span>10.Sınıf Taktir Teşekkür Hesaplama</span></h4>
-        <form class="hnarac">
-            <fieldset class="meb">
-                <div class="notlar" id="not"><em>NOT:</em> Bu hesaplama aracı 2021 - 2022 eğitim yılınna uyumlu olarak hazırlanmıştır.Boş bırakdığınız dersler "0" olarak alınacaktır.Notları virgülüne kadar girerseni %99.9 Doğru çıkacaktır.</div>
-                <ol>
-                    <li id="matematik"> <label for="matematikpuan"></label>Matematik :<input type="number" class="mat" name="sinav1" id="sinav1" maxlength="6"><br/></li>
-                    <li id="fizik"> <label for="fizikpuan"></label>Fizik :<input type="number" name="sinav2" id="sinav2" maxlength="6"><br/></li>
-                    <li id="kimya"> <label for="kimyapuan"></label>Kimya :<input type="number" name="sinav3" id="sinav3" maxlength="6"><br/></li>
-                    <li id="biyoloji"> <label for="biyolojipuan"></label>Biyoloji :<input type="number" name="sinav4" id="sinav4" maxlength="6"><br/></li>
-                    <li id="edebiyat"> <label for="edebiyatpuan"></label>Edebiyat :<input type="number" name="sinav5" id="sinav5" maxlength="6"><br/></li>
-                    <li id="ingilize"> <label for="ingpuan"></label>İngilizce :<input type="number" name="sinav6" id="sinav6" maxlength="6"><br/></li>
-                    <li id="almanca"> <label for="almancapuan"></label>Almanca : <input type="number" name="sinav7" id="sinav7" maxlength="5"><br/></li>
-                    <li id="resim"> <label for="gorselsanatlarpuan"></label>Görsel/Müzik :<input type="number" name="sinav8" id="sinav8" maxlength="6"><br/></li>
-                    <li id="beden"> <label for="bedenegitimipuan"></label>Beden Eğitimi :<input type="number" name="sinav9" id="sinav9" maxlength="6"><br/></li>
-                    <li id="felsefe"> <label for="felsefepuan"></label>Felsefe :<input type="number" name="sinav10" id="sinav10" maxlength="6"><br/></li>
-                    <li id="tarih"><label for="tarihpuan"></label>Tarih :<input type="number" name="sinav11" id="sinav11" maxlength="6"><br/></li>
-                    <li id="cografya"><label for="cografyapuan"></label>Coğrafya :<input type="number" name="sinav12" id="sinav12" maxlength="6"><br/></li>
-                    <li id="astronomi"><label for="astronomipuan"></label>Astronomi :<input type="number" name="sinav13" id="sinav13" maxlength="6"><br/></li>
-                    <li id="demokrosi"><label for="demokrosipuan"></label>Demokrosi :<input type="number" name="sinav14" id="sinav14" maxlength="6"><br/></li>
-                    <li id="din"><label for="dinpuan"></label>Din kültürü :<input type="number" name="sinav15" id="sinav15" maxlength="6"><br/></li>
-
-                    <li id="sonuc"><label for="sonucpuan"></label>Ortalama :<input type="text" name="txtortalama" id="txtortalama" maxlength="0"><br/></li>
-                    <li id="sonuc"><label for="sonucpuan"></label>Belge :<input type="text" name="txtharf" id="txtharf" maxlength="0"><br/></li>
-                    <input type="button" onclick="hesapla();" value="Hesapla" />
-                    <input type="reset" />
-                </ol>
-
-        </form>
-    </section>
-
-
-    <section class="contact" id="contact">
-        <div class="title white">
-            <h1>İletişim</h1>
-            <p>Öneri ve Görüşleriniz için bana ulaşın.</p>
-        </div>
-        <div class="contactForm">
-            <div class="row">
-                <div class="col50">
-                    <input type="text" name="" placeholder="İsim">
-                </div>
-                <div class="col50">
-                    <input type="text" name="" placeholder="Soyisim">
+            <div class="contentBx">
+                <div>
+                    <h4><span>Hoşgeldin</span>, 10/E öğrencisi</h4>
+                    <h2>Naber</h2>
+                    <h4>Aşağıdan Taktir Teşekkür Hesaplama yapabilirsin.</h4><br>
+                    <a href="#hesapla" class="btn">Hesapla</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col50">
-                    <input type="text" name="" placeholder="Email">
+            <ul class="sci">
+                <li>
+                    <a href=""><img src="facebook-logo-sticker-10107-6195-P-ORG.jpg" width="50px"></a>
+                </li>
+                <li>
+                    <a href=""><img src="png-clipart-twitter-twitter-thumbnail.png" width="50px"></a>
+                </li>
+                <li>
+                    <a href=""><img src="Instagram_logo_2016.svg.png" width="50px"></a>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section class="hesapla" id="hesapla">
+            <h4><span>10.Sınıf Taktir Teşekkür Hesaplama</span></h4>
+            <form class="hnarac">
+                <fieldset class="meb">
+                    <div class="notlar" id="not"><em>NOT:</em> Bu hesaplama aracı 2021 - 2022 eğitim yılınna uyumlu olarak hazırlanmıştır.Boş bırakdığınız dersler "0" olarak alınacaktır.Notları virgülüne kadar girerseni %99.9 Doğru çıkacaktır.</div>
+                    <ol>
+                        <li id="matematik"> <label for="matematikpuan"></label>Matematik :<input type="number" class="mat" name="sinav1" id="sinav1" maxlength="6"><br/></li>
+                        <li id="fizik"> <label for="fizikpuan"></label>Fizik :<input type="number" name="sinav2" id="sinav2" maxlength="6"><br/></li>
+                        <li id="kimya"> <label for="kimyapuan"></label>Kimya :<input type="number" name="sinav3" id="sinav3" maxlength="6"><br/></li>
+                        <li id="biyoloji"> <label for="biyolojipuan"></label>Biyoloji :<input type="number" name="sinav4" id="sinav4" maxlength="6"><br/></li>
+                        <li id="edebiyat"> <label for="edebiyatpuan"></label>Edebiyat :<input type="number" name="sinav5" id="sinav5" maxlength="6"><br/></li>
+                        <li id="ingilize"> <label for="ingpuan"></label>İngilizce :<input type="number" name="sinav6" id="sinav6" maxlength="6"><br/></li>
+                        <li id="almanca"> <label for="almancapuan"></label>Almanca : <input type="number" name="sinav7" id="sinav7" maxlength="5"><br/></li>
+                        <li id="resim"> <label for="gorselsanatlarpuan"></label>Görsel/Müzik :<input type="number" name="sinav8" id="sinav8" maxlength="6"><br/></li>
+                        <li id="beden"> <label for="bedenegitimipuan"></label>Beden Eğitimi :<input type="number" name="sinav9" id="sinav9" maxlength="6"><br/></li>
+                        <li id="felsefe"> <label for="felsefepuan"></label>Felsefe :<input type="number" name="sinav10" id="sinav10" maxlength="6"><br/></li>
+                        <li id="tarih"><label for="tarihpuan"></label>Tarih :<input type="number" name="sinav11" id="sinav11" maxlength="6"><br/></li>
+                        <li id="cografya"><label for="cografyapuan"></label>Coğrafya :<input type="number" name="sinav12" id="sinav12" maxlength="6"><br/></li>
+                        <li id="astronomi"><label for="astronomipuan"></label>Astronomi :<input type="number" name="sinav13" id="sinav13" maxlength="6"><br/></li>
+                        <li id="demokrosi"><label for="demokrosipuan"></label>Demokrosi :<input type="number" name="sinav14" id="sinav14" maxlength="6"><br/></li>
+                        <li id="din"><label for="dinpuan"></label>Din kültürü :<input type="number" name="sinav15" id="sinav15" maxlength="6"><br/></li>
+
+                        <li id="sonuc"><label for="sonucpuan"></label>Ortalama :<input type="text" name="txtortalama" id="txtortalama" maxlength="0"><br/></li>
+                        <li id="sonuc"><label for="sonucpuan"></label>Belge :<input type="text" name="txtharf" id="txtharf" maxlength="0"><br/></li>
+                        <input type="button" onclick="hesapla();" value="Hesapla" />
+                        <input type="reset" />
+                    </ol>
+
+            </form>
+        </section>
+
+
+        <section class="contact" id="contact">
+            <div class="title white">
+                <h1>İletişim</h1>
+                <p>Öneri ve Görüşleriniz için bana ulaşın.</p>
+            </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="" placeholder="İsim">
+                    </div>
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Soyisim">
+                    </div>
                 </div>
-                <div class="col50">
-                    <input type="text" name="" placeholder="Tel. numarası">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Email">
+                    </div>
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Tel. numarası">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <textarea placeholder="Mesaj"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Gönder">
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col100">
-                    <textarea placeholder="Mesaj"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col100">
-                    <input type="submit" value="Gönder">
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
 
     <div class="copyright">
         <p>Copyright © 2021 Oğuzhan Aktaş. All Right Reserved.</p>
@@ -143,7 +374,22 @@
     </div>
 
 
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 4500);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
 </body>
 
+
+</html>
 
 </html>

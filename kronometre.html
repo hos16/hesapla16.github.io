@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TTAL KRONOMETRE</title>
+    <meta name="description" content="ttal kronometre : zamanı ölçmek için tıklayın">
+    <meta name="keywords" content="kronometre, zaman, zaman ölçmek, tur">
+    <link rel="stylesheet" type="text/css" href="http://krono-metre.com/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/kronometre.css">
+    <script src="js/jquery.js"></script>
+    <meta name="theme-color" content="#000011">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://ttalhesapla.github.io/" target="_blank">TTALHESAPLA.GİTHUB.İO</a>
+        </div>
+        <div id="motto" class="hidden-xs">Sınavlara Hazırlıkta Zamanı ölçmek için online kronometre...</div>
+    </div>
+
+
+    <br><br><br><br><br>
+
+
+    <div id="kronometre" class="text-center">
+        <div class="ust-butonlar">
+            <button class="btn btn-lg btn-primary" onclick="openFullscreen();"><span class="hide-xs">Tam ekran</span> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"></path>
+                    </svg></button>
+            <button class="btn btn-lg btn-success" id="btnSettings">Ayarlar</button>
+            <button class="btn btn-lg btn-danger" onclick="reset()" id="btn-sifirla">SIFIRLA</button>
+        </div>
+        <div id="ekran">
+            <span class="saat"></span><span class="dakika">00</span>:<span class="saniye">00</span><span class="salise">.000</span>
+        </div>
+        <div class="alt-butonlar">
+            <button class="btn btn-lg btn-success" onclick="startStop()" id="btnStartStop">BAŞLA</button>
+        </div>
+    </div>
+
+    <!-------------------------------------------Ayar modal----------------------------------------
+    <div id="ayarModal" class="modal fade in" tabindex="-1" role="dialog" style="display: block; padding-right: 16px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Ayarlar</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline text-center">
+                        <div class="well">Süre ve ses seçimi yaparak belirli aralıklarla ses çalınmasını sağlayabilirsiniz. İptal etmek için dakika ve saniyeyi "0" (sıfır) olarak seçin.</div>
+                        Her &nbsp; <select id="setMinute" class="form-control">
+                          <option value="0">0 dakika</option><option value="1">1 dakika</option><option value="2">2 dakika</option><option value="3">3 dakika</option><option value="4">4 dakika</option><option value="5">5 dakika</option><option value="6">6 dakika</option><option value="7">7 dakika</option><option value="8">8 dakika</option><option value="9">9 dakika</option><option value="10">10 dakika</option><option value="11">11 dakika</option><option value="12">12 dakika</option><option value="13">13 dakika</option><option value="14">14 dakika</option><option value="15">15 dakika</option><option value="16">16 dakika</option><option value="17">17 dakika</option><option value="18">18 dakika</option><option value="19">19 dakika</option><option value="20">20 dakika</option><option value="21">21 dakika</option><option value="22">22 dakika</option><option value="23">23 dakika</option><option value="24">24 dakika</option><option value="25">25 dakika</option><option value="26">26 dakika</option><option value="27">27 dakika</option><option value="28">28 dakika</option><option value="29">29 dakika</option><option value="30">30 dakika</option><option value="31">31 dakika</option><option value="32">32 dakika</option><option value="33">33 dakika</option><option value="34">34 dakika</option><option value="35">35 dakika</option><option value="36">36 dakika</option><option value="37">37 dakika</option><option value="38">38 dakika</option><option value="39">39 dakika</option><option value="40">40 dakika</option><option value="41">41 dakika</option><option value="42">42 dakika</option><option value="43">43 dakika</option><option value="44">44 dakika</option><option value="45">45 dakika</option><option value="46">46 dakika</option><option value="47">47 dakika</option><option value="48">48 dakika</option><option value="49">49 dakika</option><option value="50">50 dakika</option><option value="51">51 dakika</option><option value="52">52 dakika</option><option value="53">53 dakika</option><option value="54">54 dakika</option><option value="55">55 dakika</option><option value="56">56 dakika</option><option value="57">57 dakika</option><option value="58">58 dakika</option><option value="59">59 dakika</option><option value="60">60 dakika</option><option value="61">61 dakika</option><option value="62">62 dakika</option><option value="63">63 dakika</option><option value="64">64 dakika</option><option value="65">65 dakika</option><option value="66">66 dakika</option><option value="67">67 dakika</option><option value="68">68 dakika</option><option value="69">69 dakika</option><option value="70">70 dakika</option><option value="71">71 dakika</option><option value="72">72 dakika</option><option value="73">73 dakika</option><option value="74">74 dakika</option><option value="75">75 dakika</option><option value="76">76 dakika</option><option value="77">77 dakika</option><option value="78">78 dakika</option><option value="79">79 dakika</option><option value="80">80 dakika</option><option value="81">81 dakika</option><option value="82">82 dakika</option><option value="83">83 dakika</option><option value="84">84 dakika</option><option value="85">85 dakika</option><option value="86">86 dakika</option><option value="87">87 dakika</option><option value="88">88 dakika</option><option value="89">89 dakika</option><option value="90">90 dakika</option><option value="91">91 dakika</option><option value="92">92 dakika</option><option value="93">93 dakika</option><option value="94">94 dakika</option><option value="95">95 dakika</option><option value="96">96 dakika</option><option value="97">97 dakika</option><option value="98">98 dakika</option><option value="99">99 dakika</option><option value="100">100 dakika</option><option value="101">101 dakika</option><option value="102">102 dakika</option><option value="103">103 dakika</option><option value="104">104 dakika</option><option value="105">105 dakika</option><option value="106">106 dakika</option><option value="107">107 dakika</option><option value="108">108 dakika</option><option value="109">109 dakika</option><option value="110">110 dakika</option><option value="111">111 dakika</option><option value="112">112 dakika</option><option value="113">113 dakika</option><option value="114">114 dakika</option><option value="115">115 dakika</option><option value="116">116 dakika</option><option value="117">117 dakika</option><option value="118">118 dakika</option><option value="119">119 dakika</option><option value="120">120 dakika</option>					<option value="125">125 dakika</option><option value="130">130 dakika</option><option value="135">135 dakika</option><option value="140">140 dakika</option><option value="145">145 dakika</option><option value="150">150 dakika</option><option value="155">155 dakika</option><option value="160">160 dakika</option><option value="165">165 dakika</option><option value="170">170 dakika</option><option value="175">175 dakika</option><option value="180">180 dakika</option><option value="185">185 dakika</option><option value="190">190 dakika</option><option value="195">195 dakika</option><option value="200">200 dakika</option><option value="205">205 dakika</option><option value="210">210 dakika</option><option value="215">215 dakika</option><option value="220">220 dakika</option><option value="225">225 dakika</option><option value="230">230 dakika</option><option value="235">235 dakika</option><option value="240">240 dakika</option><option value="245">245 dakika</option><option value="250">250 dakika</option><option value="255">255 dakika</option><option value="260">260 dakika</option><option value="265">265 dakika</option><option value="270">270 dakika</option><option value="275">275 dakika</option><option value="280">280 dakika</option><option value="285">285 dakika</option><option value="290">290 dakika</option><option value="295">295 dakika</option><option value="300">300 dakika</option>                </select>
+                        <select id="setSecond" class="form-control">
+                          <option value="0">0 saniye</option><option value="1">1 saniye</option><option value="2">2 saniye</option><option value="3">3 saniye</option><option value="4">4 saniye</option><option value="5">5 saniye</option><option value="6">6 saniye</option><option value="7">7 saniye</option><option value="8">8 saniye</option><option value="9">9 saniye</option><option value="10">10 saniye</option><option value="11">11 saniye</option><option value="12">12 saniye</option><option value="13">13 saniye</option><option value="14">14 saniye</option><option value="15">15 saniye</option><option value="16">16 saniye</option><option value="17">17 saniye</option><option value="18">18 saniye</option><option value="19">19 saniye</option><option value="20">20 saniye</option><option value="21">21 saniye</option><option value="22">22 saniye</option><option value="23">23 saniye</option><option value="24">24 saniye</option><option value="25">25 saniye</option><option value="26">26 saniye</option><option value="27">27 saniye</option><option value="28">28 saniye</option><option value="29">29 saniye</option><option value="30">30 saniye</option><option value="31">31 saniye</option><option value="32">32 saniye</option><option value="33">33 saniye</option><option value="34">34 saniye</option><option value="35">35 saniye</option><option value="36">36 saniye</option><option value="37">37 saniye</option><option value="38">38 saniye</option><option value="39">39 saniye</option><option value="40">40 saniye</option><option value="41">41 saniye</option><option value="42">42 saniye</option><option value="43">43 saniye</option><option value="44">44 saniye</option><option value="45">45 saniye</option><option value="46">46 saniye</option><option value="47">47 saniye</option><option value="48">48 saniye</option><option value="49">49 saniye</option><option value="50">50 saniye</option><option value="51">51 saniye</option><option value="52">52 saniye</option><option value="53">53 saniye</option><option value="54">54 saniye</option><option value="55">55 saniye</option><option value="56">56 saniye</option><option value="57">57 saniye</option><option value="58">58 saniye</option><option value="59">59 saniye</option>                </select>                        'de bir
+                        <br><br> <select id="setSound" class="form-control">
+                          <option value="ding.wav">Ding</option>
+                          <option value="clock-tick.wav">Saat Tik</option>
+                          <option value="pomti.mp3">PomTi</option>
+                          <option value="bells.mp3">Bells</option>
+                          <option value="stimer.mp3">Timer</option>  
+                          <option value="woody.mp3">Woody</option>
+                          <option value="rabbit.mp3">Rabbit</option>                    
+                          <option value="sound-notification.wav">Bildirim Sesi</option>                    
+                          <option value="alarm-clock.wav">Saat</option>
+                          <option value="uzay.wav">Uzay</option>
+                          <option value="horoz.wav">Horoz</option>
+                      </select> &nbsp; sesini çal!
+                        <br><br>
+                        <label><input type="checkbox" onclick="tasarruf()" id="btnTasarruf" checked="checked"> Milisaniyeleri göster</label>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-primary" id="setNow">UYGULA</button>
+                </div>
+            </div>
+            
+    </div>
+ 
+    </div>
+    -------------------->
+    <script>
+        var DING = 0;
+        var xDAKIKA = 0;
+        var xSANIYE = 0;
+        var DINGFILE = 'ding.wav';
+        var soundBefore = 0;
+        var status = 0;
+
+
+        var clsStopwatch = function() {
+            // Private vars
+            var startAt = 0; // Time of last start / resume. (0 if not running)
+            var lapTime = 0; // Time on the clock when last stopped in milliseconds
+
+            var now = function() {
+                return (new Date()).getTime();
+            };
+
+            /*--*/
+            let tmps = Number(okuCookie('startAt'));
+            let tmpl = Number(okuCookie('lapTime'));
+
+            if (tmps == 0 && tmpl < 40000000) {
+                lapTime = tmpl;
+            } else if (tmps > 0 && (tmpl + now() - tmps) < 40000000) {
+                startAt = tmps;
+                lapTime = tmpl;
+                status = 1;
+            }
+            /*--*/
+
+            var setStartAt = function(val) {
+                startAt = val;
+                yazCookie('startAt', val, 1);
+            }
+
+            var setLapTime = function(val) {
+                lapTime = val;
+                yazCookie('lapTime', val, 1);
+            }
+
+
+            // Public methods
+            // Start or resume
+            this.start = function() {
+                sa = startAt ? startAt : now();
+                setStartAt(sa);
+            };
+
+            // Stop or pause
+            this.stop = function() {
+                // If running, update elapsed time otherwise keep it
+                lt = startAt ? lapTime + now() - startAt : lapTime;
+                setLapTime(lt);
+                setStartAt(0); // Paused
+            };
+
+            // ding
+            this.ding = function() {
+                playSound(DINGFILE);
+            }
+
+            // Reset
+            this.reset = function() {
+                setLapTime(0);
+                setStartAt(0);
+            };
+
+            // Duration
+            this.time = function() {
+                return lapTime + (startAt ? now() - startAt : 0);
+            };
+        };
+
+        var x = new clsStopwatch();
+        var lastLapTime = 0;
+        var clocktimer;
+        var km = {
+            saat: '00',
+            dakika: '00',
+            saniye: '00',
+            salise: '000'
+        };
+        var record_cnt = 0;
+        var beforeSec = 0;
+        var ecoMode = false;
+        var locho = location.host.replace('www.', '');
+        var loc = 'krono';
+        var ho = '-metre';
+        var ext = '.com';
+
+        function pad(num, size) {
+            var s = "0000" + num;
+            return s.substr(s.length - size);
+        }
+
+
+        function formatTime(time, title) {
+            var h = m = s = ms = 0;
+            var newTime = '';
+
+            h = Math.floor(time / (60 * 60 * 1000));
+            time = time % (60 * 60 * 1000);
+            m = Math.floor(time / (60 * 1000));
+            time = time % (60 * 1000);
+            s = Math.floor(time / 1000);
+            ms = Math.floor(time) % 1000;
+
+            newTime = '';
+            if (h > 0) {
+                newTime = pad(h, 2) + ':';
+            }
+            km.saat = pad(h, 2), km.dakika = pad(m, 2), km.saniye = pad(s, 2), km.salise = pad(ms, 3);
+            newTime += pad(m, 2) + ':' + pad(s, 2);
+            if (title == 0) {
+                if (!ecoMode) newTime += '<em>.' + pad(ms, 3) + '</em>';
+            }
+
+            return newTime;
+        }
+
+
+        function update() {
+            var sec = Math.floor(x.time() / 1000);
+            if (DING != 0 && sec != beforeSec && sec % DING == 0) {
+                x.ding();
+            }
+            beforeSec = sec;
+            document.title = formatTime(x.time(), 1) + ' - Kronometre';
+            if (km.saat == '00') {
+                $('#ekran .saat').text('');
+            } else {
+                $('#ekran .saat').text(km.saat + ':');
+            }
+            $('#ekran .dakika').text(km.dakika);
+            $('#ekran .saniye').text(km.saniye);
+            if (!ecoMode) $('#ekran .salise').text('.' + km.salise);
+        }
+
+        function startStop() {
+            if (status == 0) {
+                if (ecoMode) {
+                    clocktimer = setInterval("update()", 200);
+                } else {
+                    clocktimer = setInterval("update()", 11);
+                }
+                x.start();
+                status = 1;
+                $('#btnStartStop').removeClass('btn-success').addClass('btn-warning').text('DUR');
+            } else {
+                x.stop();
+                clearInterval(clocktimer);
+                update();
+                status = 0;
+                $('#btnStartStop').removeClass('btn-warning').addClass('btn-success').text('BAŞLA');
+            }
+        }
+
+        function reset() {
+            if (status == 1) startStop();
+            lastLapTime = 0;
+            x.reset();
+            update();
+        }
+
+        function tasarruf() {
+            if (ecoMode) {
+                ecoMode = false;
+                $('#ekran .salise').text('.000');
+                if (status == 1) {
+                    clearInterval(clocktimer);
+                    clocktimer = setInterval("update()", 11);
+                }
+                $('#btnTasarruf').prop('checked', true);
+            } else {
+                ecoMode = true;
+                $('#ekran .salise').text('');
+                if (status == 1) {
+                    clearInterval(clocktimer);
+                    clocktimer = setInterval("update()", 200);
+                }
+                $('#btnTasarruf').prop('checked', false);
+            }
+
+            yazCookie('ecoMode', ecoMode);
+        }
+
+        $('#setSound').change(function() {
+            playSound($(this).val());
+        });
+
+        $('#btnSettings').click(function() {
+            $('#setMinute').val(xDAKIKA);
+            $('#setSecond').val(xSANIYE);
+            $('#setSound').val(DINGFILE);
+            $('#ayarModal').modal('show');
+        });
+
+        $('#setNow').click(function() {
+            xDAKIKA = $('#setMinute').val();
+            xSANIYE = $('#setSecond').val();
+            DINGFILE = $('#setSound option:selected').val();
+            DING = xDAKIKA * 60 + parseInt(xSANIYE);
+            $('#ayarModal').modal('hide');
+        });
+
+        $(document).keydown(function(e) {
+            if ($("#onerim").is(":focus")) {} else if ($("#notebox").is(":focus")) {} else {
+                if (e.which == 32) {
+                    startStop();
+                    return false;
+                }
+                if (e.which == 75) {
+                    record();
+                    return false;
+                }
+                if (e.which == 84) {
+                    records_clear();
+                    return false;
+                }
+                if (e.which == 83) {
+                    reset();
+                    return false;
+                }
+                if (e.which == 77) {
+                    tasarruf();
+                }
+            }
+        });
+
+
+        /*--*/
+        if (okuCookie('ecoMode') !== null) {
+            ecoMode = (okuCookie('ecoMode') == 'true');
+            $("#btnTasarruf").prop("checked", !ecoMode);
+        }
+
+        if (status > 0) {
+            if (ecoMode) {
+                clocktimer = setInterval("update()", 200);
+            } else {
+                clocktimer = setInterval("update()", 11);
+            }
+            $('#btnStartStop').removeClass('btn-success').addClass('btn-warning').text('DUR');
+        }
+
+        if (Number(okuCookie('lapTime')) > 0) {
+            update();
+        }
+        /*--*/
+
+
+        function playSound(file) {
+            var sound = new Howl({
+                urls: ['assets/sound/' + file]
+                    /*,volume : 0.1*/
+            });
+            if (soundBefore != 0) {
+                soundBefore.stop();
+            }
+            sound.play();
+            soundBefore = sound;
+        }
+
+        /* --- fullScreen --- */
+        var elem = document.getElementById('ekran');
+
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { /* Safari */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE11 */
+                document.msExitFullscreen();
+            }
+        }
+
+        document.ondblclick = function(event) {
+            if (document.fullscreenElement) {
+                document.exitFullscreen()
+
+            }
+        }
+
+
+        /* --- cookie --- */
+        function yazCookie(ad, deger, gun) {
+            if (gun) {
+                var tarih = new Date();
+                tarih.setTime(tarih.getTime() + (gun * 24 * 60 * 60 * 1000));
+                var bitis = "; expires=" + tarih.toGMTString();
+            } else var bitis = "";
+            document.cookie = ad + "=" + deger + bitis + "; path=/";
+        }
+
+        function okuCookie(ad) {
+            var adEQ = ad + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(adEQ) == 0) return c.substring(adEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function silCookie(name) {
+            createCookie(name, "", -1);
+        }
+        var dizi = ["#D24D57", "#e74c3c", "#f1c40f", "#2c3e50", "#a200ed", "#bdc3c7", "#1abc9c", "#3498db", "#95a5a6"];
+
+        function Kontrol() {
+            if (km.dakika < 30) {
+                document.body.style.backgroundColor = dizi[1]
+            }
+            if (km.dakika >= 30) {
+                document.body.style.backgroundColor = dizi[2];
+            }
+            if (km.dakika >= 50) {
+                document.body.style.backgroundColor = dizi[3];
+            }
+            if (km.saat >= 1) {
+                document.body.style.backgroundColor = dizi[4];
+            }
+            if (km.saat >= 1 && km.dakika >= 30) {
+                document.body.style.backgroundColor = dizi[5];
+            }
+            if (km.saat >= 2) {
+                document.body.style.backgroundColor = dizi[6];
+            }
+            if (km.saat >= 2 && km.dakika >= 30) {
+                document.body.style.backgroundColor = dizi[7];
+            }
+            if (km.saat >= 3) {
+                document.body.style.backgroundColor = dizi[8];
+            }
+            if (km.saat >= 4) {
+                document.body.style.backgroundColor = dizi[9];
+            }
+            //////////////////////////////////////Tam Ekran için/////////////////////////////////////////
+            if (km.dakika < 30) {
+                document.getElementById("ekran").style.backgroundColor = dizi[1];
+            }
+            if (km.dakika >= 30) {
+                document.getElementById("ekran").style.backgroundColor = dizi[2];
+            }
+            if (km.dakika >= 50) {
+                document.getElementById("ekran").style.backgroundColor = dizi[3];
+            }
+            if (km.saat >= 1) {
+                document.getElementById("ekran").style.backgroundColor = dizi[4];
+            }
+            if (km.saat >= 1 && km.dakika >= 30) {
+                document.getElementById("ekran").style.backgroundColor = dizi[5];
+            }
+            if (km.saat >= 2) {
+                document.getElementById("ekran").style.backgroundColor = dizi[6];
+            }
+            if (km.saat >= 2 && km.dakika >= 30) {
+                document.getElementById("ekran").style.backgroundColor = dizi[7];
+            }
+            if (km.saat >= 3) {
+                document.getElementById("ekran").style.backgroundColor = dizi[8];
+            }
+            if (km.saat >= 4) {
+                document.getElementById("ekran").style.backgroundColor = dizi[9];
+            }
+            ///////////////////////////////////////zil sesi ekle sınavlardan sonra////////////////////////////
+
+        }
+        setInterval(Kontrol, 50);
+    </script>
+
+</body>
+
+</html>
+
+</html>

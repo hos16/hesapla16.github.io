@@ -1,0 +1,364 @@
+@font-face {
+    font-family: 'ArialRounded';
+    font-display: swap;
+    src: url('/assets/fonts/Arial_Rounded_MT.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArialRounded';
+    font-display: swap;
+    src: url('/assets/fonts/Arial-Rounded-MT-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'ArialRounded';
+    color: #ccd;
+    /* background-color: rgb(8, 35, 59);*/
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.navbar {
+    margin-bottom: 0px
+}
+
+.navbar-default {
+    background-color: #36404f;
+    border: none;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'ArialRounded', Helvetica, Arial, Sans-serif
+}
+
+button,
+button:focus {
+    outline: 0 !important;
+}
+
+#motto {
+    padding: 10px 20px 0 0;
+    font: italic normal 20px serif;
+    color: #ddddff;
+    float: right
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+#koyu-container {
+    min-height: 300px
+}
+
+#kronometre {
+    border-radius: 7px;
+    padding: 10px
+}
+
+#kronometre .ust-butonlar {
+    text-align: right
+}
+
+#kronometre .alt-butonlar {
+    text-align: right
+}
+
+#kronometre .ust-butonlar .btn,
+#kronometre .alt-butonlar .btn {
+    border-radius: 3px;
+}
+
+.btn-tasarrufOff,
+.btn-tasarrufOff:focus {
+    background-color: #505055;
+    color: #aab
+}
+
+#ekran {
+    font: normal 90px 'ArialRounded', sans-serif;
+    color: #ddf;
+    padding: 30px 0;
+    white-space: nowrap
+}
+
+@media (max-width: 500px) {
+    .hide-xs {
+        display: none
+    }
+}
+
+@media (min-width: 450px) {
+    #ekran {
+        font: normal 120px 'ArialRounded', sans-serif;
+    }
+}
+
+@media (min-width: 800px) {
+    #ekran {
+        font: normal 150px 'ArialRounded', sans-serif;
+    }
+}
+
+#ekran span {
+    display: inline-block;
+    text-align: right;
+}
+
+#ekran .salise {
+    text-align: left;
+    font-size: 24px;
+    width: 50px;
+}
+
+#btnStartStop {
+    min-width: 92px;
+}
+
+#sureler {
+    text-align: center;
+    max-width: 520px;
+    min-width: 300px;
+    margin: 10px auto 10px auto;
+    max-height: 330px;
+    overflow: auto
+}
+
+#sureler div {
+    text-align: left;
+    background: #2b4b6c;
+    padding: 15px 10px;
+    color: #dde;
+    min-width: 270px
+}
+
+#sureler div p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em
+}
+
+#sureler div p em {
+    font-style: normal;
+    font-size: 0.8em
+}
+
+#sureler .removeBtn {
+    font-size: 11px;
+    border-radius: 10%;
+}
+
+#notalani {
+    text-align: center;
+    clear: both;
+    padding: 15px 0
+}
+
+#notalani a {
+    color: #ddf;
+}
+
+#notalani textarea {
+    display: none;
+    width: 500px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #2b4b6c;
+    color: ghostwhite;
+    padding: 10px 15px;
+    font-size: 16px
+}
+
+#ayarModal,
+#oneriModal {
+    color: #333333
+}
+
+code {
+    background: #000;
+    color: yellow;
+    padding: 4px 6px
+}
+
+@media (display-mode: fullscreen) {
+    #ekran {
+        justify-content: center;
+        min-height: 100vh !important;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#ekran .salise {
+    text-align: left;
+    font-size: 24px;
+    width: 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#ekran {
+    font: normal 220px 'ArialRounded', sans-serif;
+    color: #ddf;
+    padding: 30px 0;
+    white-space: nowrap;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#ekran span {
+    display: inline-block;
+    text-align: right;
+}
+
+#kronometre {
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.bt .btn-group-lg>.btn,
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+#kronometre .ust-butonlar .btn,
+#kronometre .alt-butonlar .btn {
+    border-radius: 3px;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#motto {
+    padding: 10px 20px 0 0;
+    font: italic normal 20px serif;
+    color: #ddddff;
+    float: right;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'ArialRounded', Helvetica, Arial, Sans-serif;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}

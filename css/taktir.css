@@ -228,8 +228,8 @@ form.hnarac>fieldset>ol>li .neg {
 /*-----------------------------4.sınıf taktir teşekkür hesaplama input boyutları------------------------------------------------*/
 
 input[name=sinav1] {
-    width: auto;
-    height: auto;
+    width: 175px;
+    height: 35px;
 }
 
 input[name=sinav2] {
@@ -278,6 +278,26 @@ input[name=sinav10] {
 }
 
 input[name=sinav11] {
+    width: auto;
+    height: auto;
+}
+
+input[name=sinav12] {
+    width: auto;
+    height: auto;
+}
+
+input[name=sinav13] {
+    width: auto;
+    height: auto;
+}
+
+input[name=sinav14] {
+    width: auto;
+    height: auto;
+}
+
+input[name=sinav15] {
     width: auto;
     height: auto;
 }

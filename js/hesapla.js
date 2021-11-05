@@ -144,7 +144,7 @@ function notifyMe() {
 
     } else if (Notification.permission === "granted") {
 
-        notification = new Notification("harfnot");
+        notification = new Notification("h");
 
     } else if (Notification.permission !== "denied") {
 

@@ -142,14 +142,16 @@ function notifyMe() {
         alert("This browser does not support desktop notification");
     } else if (Notification.permission === "granted") {
 
-        var notification = new Notification("harfnot");
+        var notification;
+        notification = new Notification("harfnot");
 
     } else if (Notification.permission !== "denied") {
 
         Notification.requestPermission().then(function(permission) {
 
             if (permission === "granted") {
-                var notification = new Notification("Hi there!");
+                var notification;
+                notification = new Notification("Hi there!");
             }
 
 

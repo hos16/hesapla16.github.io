@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Comptible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10.SINIF TAKDİR TEŞEKKÜR HESAPLAMA TTAL</title>
-    <meta name="description" content="hesaplattal.github 10.Sınıf  Taktir Takdir Teşekkür hesaplama motoru... ">
-    <meta name="keywords" content=" hesaplattal.github.io taktir hesaplattal.git teşekkür hesaplama kronometre hesaplattal ttal  oguzhanaktas 10/E taktir tesekkür hesaplama ttal10e ">
+    <meta name="description" content="hesaplattal.github 10.Sınıf Taktir Takdir Teşekkür hesaplama motoru...">
+    <meta name="keywords" content=" hesaplattal.github.io taktir teşekkür hesaplama hesaplattal.git takdir kronometre hesaplattal ttal  oguzhanaktas 10/E taktir tesekkür hesaplama ttal10e">
     <script src="js/hesapla.js"></script>
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859">
     <META name="Copyright" content="Bu site 2022 ye kadar korunmaktadır.">
-
     <link rel="stylesheet" href="css/taktir.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/taktirstyle.css">
@@ -268,6 +267,7 @@
                     <h4>Aşağıdan Taktir Teşekkür Hesaplama yapabilirsin.</h4><br>
                     <a href="#hesapla" class="btn">Hesapla</a>
                     <a href="kronometre.html" class="btnkron">Zaman Tut!</a>
+                    <button onclick="notifyMe()">Notify me!</button>
                 </div>
             </div>
             <ul class="sci">
@@ -384,6 +384,29 @@
         function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("myDiv").style.display = "block";
+        }
+
+        function notifyMe() {
+
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+            } else if (Notification.permission === "granted") {
+
+                var notification = new Notification("hello");
+
+            } else if (Notification.permission !== "denied") {
+
+                Notification.requestPermission().then(function(permission) {
+
+                    if (permission === "granted") {
+                        var notification = new Notification("Hi there!");
+                    }
+
+
+                });
+
+            }
+
         }
     </script>
 

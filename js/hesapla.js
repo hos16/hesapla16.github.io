@@ -140,7 +140,7 @@ function notifyMe() {
     var notification;
     if (!("Notification" in window)) {
 
-        alert("This browser does not support desktop notification");
+        alert("Bu tarayıcı bildirim desteklemior:)");
 
     } else if (Notification.permission === "granted") {
 

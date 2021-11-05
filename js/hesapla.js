@@ -137,12 +137,13 @@ function hesapla() {
 }
 
 function notifyMe() {
-
+    var notification;
     if (!("Notification" in window)) {
+
         alert("This browser does not support desktop notification");
+
     } else if (Notification.permission === "granted") {
 
-        var notification;
         notification = new Notification("harfnot");
 
     } else if (Notification.permission !== "denied") {
@@ -150,7 +151,6 @@ function notifyMe() {
         Notification.requestPermission().then(function(permission) {
 
             if (permission === "granted") {
-                var notification;
                 notification = new Notification("Hi there!");
             }
 

@@ -151,7 +151,7 @@ function notifyMe() {
         Notification.requestPermission().then(function(permission) {
 
             if (permission === "granted") {
-                notification = new Notification("Hi there!");
+                notification = new Notification("Merhaba!");
             }
 
 

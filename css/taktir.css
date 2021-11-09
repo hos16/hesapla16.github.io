@@ -49,7 +49,8 @@ form.hnarac>fieldset>ol>li {
 
 form.hnarac>fieldset>ol>li>label {
     font-weight: bold;
-    min-width: 180px;
+    min-width: 150px;
+    /*yazı öncesi azalma*/
     white-space: nowrap;
     cursor: auto;
 }
@@ -88,12 +89,6 @@ form.hnarac>fieldset>ol>li select {
     margin: 0 5px;
 }
 
-form.hnarac>fieldset>ol>li input[type=radio] {
-    width: 13px;
-    height: 13px;
-    cursor: pointer;
-}
-
 form.hnarac>fieldset>ol>li input[type=checkbox],
 form.hnarac>fieldset>ol>li label {
     cursor: pointer;
@@ -109,123 +104,13 @@ form.hnarac>fieldset>ol>li input[type=number]::-webkit-outer-spin-button {
     margin: 0
 }
 
-form.hnarac>fieldset>ol>li select {
+form.hnarac>fieldset>ol>li {
     cursor: pointer;
     max-width: 100%;
 }
 
-form.hnarac>fieldset>ol>li textarea {
-    width: 100%;
-    height: 200px;
-}
 
-form.hnarac>fieldset>ol>li>fieldset {
-    margin: 0 5px 0 0;
-    padding: 0;
-    border: 0;
-}
-
-form.hnarac>fieldset>ol>li>fieldset>label {
-    padding: 7px 0;
-    display: block;
-}
-
-form.hnarac>fieldset>ol>li>fieldset>label:first-child {
-    padding-top: 4px;
-}
-
-form.hnarac>fieldset>ol>li .illabel>label,
-form.hnarac>fieldset>ol>li .illabel>label :first-child {
-    display: inline-block;
-    padding: 0;
-}
-
-form.hnarac>fieldset .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-form.hnarac>fieldset .buttons>button {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border: 0;
-    border-radius: 4px;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 2px 2px 7px #cccccc;
-}
-
-form.hnarac>fieldset .buttons>button[type=button] {
-    background-color: #3B8CEE;
-    color: #FFFFFF;
-}
-
-form.hnarac>fieldset .buttons>button[type=reset] {
-    background-color: #318fbb;
-    color: #000000;
-}
-
-form.hnarac>fieldset .notlar {
-    margin: 8px;
-}
-
-form.hnarac>fieldset .embedlink {
-    float: right;
-}
-
-form.hnarac>fieldset>ol>li .iw1 {
-    width: 37px
-}
-
-form.hnarac>fieldset>ol>li .iw2 {
-    width: 40px
-}
-
-form.hnarac>fieldset>ol>li .iw3 {
-    width: 44px
-}
-
-form.hnarac>fieldset>ol>li .iw4 {
-    width: 48px
-}
-
-form.hnarac>fieldset>ol>li .iw5 {
-    width: 52px
-}
-
-form.hnarac>fieldset>ol>li .iw6 {
-    width: 56px
-}
-
-form.hnarac>fieldset>ol>li .iw7 {
-    width: 60px
-}
-
-form.hnarac>fieldset>ol>li .iw8 {
-    width: 64px
-}
-
-form.hnarac>fieldset>ol>li .iw9 {
-    width: 68px
-}
-
-form.hnarac>fieldset>ol>li .orn {
-    padding-left: 4px;
-}
-
-form.hnarac>fieldset>ol>li .neg {
-    color: #EF0000;
-    font-weight: bold;
-}
-
-
-/*-----------------------------4.sınıf taktir teşekkür hesaplama input boyutları------------------------------------------------*/
+/*-----------------------------10   .sınıf taktir teşekkür hesaplama input boyutları------------------------------------------------*/
 
 input[name=sinav1] {
     width: 175px;

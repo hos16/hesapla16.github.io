@@ -50,9 +50,9 @@ form.hnarac>fieldset>ol>li {
 form.hnarac>fieldset>ol>li>label {
     font-weight: bold;
     min-width: 150px;
-    /*yazı öncesi azalma*/
     white-space: nowrap;
     cursor: auto;
+    margin-left: 350px;
 }
 
 form.hnarac>fieldset>ol.narrowest>li>label {
@@ -110,95 +110,12 @@ form.hnarac>fieldset>ol>li {
 }
 
 
-/*-----------------------------10   .sınıf taktir teşekkür hesaplama input boyutları------------------------------------------------*/
+/*-----------------------------10.sınıf taktir teşekkür hesaplama input boyutları------------------------------------------------*/
 
-input[name=sinav1] {
+input {
     width: 175px;
     height: 35px;
 }
-
-input[name=sinav2] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav3] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav4] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav5] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav6] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav7] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav8] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav9] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav10] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav11] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav12] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav13] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav14] {
-    width: auto;
-    height: auto;
-}
-
-input[name=sinav15] {
-    width: auto;
-    height: auto;
-}
-
-input[name=txtharf] {
-    width: 240px;
-    height: 60px;
-}
-
-input[name=txtortalama] {
-    width: auto;
-    height: auto;
-}
-
-
-/*-----------------------------------------------------------------------------------------*/
 
 input[type=button] {
     background-color: red;

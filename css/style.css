@@ -8,10 +8,10 @@
 }
 
 
-/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Tebrik Mesajları------------------------------------------------------------*/
 
 div#mesaj {
-    background-color: #0be666fa;
+    background-color: #0ae967fa;
     color: white;
     padding-top: 50px;
     width: 320px;
@@ -28,7 +28,7 @@ div#mesaj {
 }
 
 div#tesekkür {
-    background-color: #eeb10afa;
+    background-color: #f0b30bfa;
     color: white;
     padding-top: 50px;
     width: 320px;
@@ -45,7 +45,7 @@ div#tesekkür {
 }
 
 div#yüz {
-    background-color: #e60b0bfa;
+    background-color: #eb0b0bfa;
     color: white;
     padding-top: 50px;
     width: 320px;

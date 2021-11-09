@@ -165,17 +165,19 @@ p {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin: 7px;
 }
 
 .btnkron {
     background: #05d6a2;
     color: #fff;
-    padding: 10px 30px;
+    padding: 10px 15px;
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
 }
 
 .sidebar {
@@ -410,6 +412,9 @@ p {
     .sidebar ul li a {
         font-size: 1.5em;
     }
+    form.hnarac>fieldset>ol>li>label {
+        margin-left: 0px;
+    }
 }
 
 @media(max-width: 705px) {
@@ -425,6 +430,20 @@ p {
     }
     .contact .contactForm {
         max-width: 320px;
+    }
+    form.hnarac>fieldset>ol>li>label {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:636) {
+    .banner .contentBx h4 {
+        font-size: 1.0em;
+        font-weight: 150;
+    }
+    .banner .contentBx h4 span {
+        font-size: 1.0em;
+        font-weight: 400;
     }
 }
 

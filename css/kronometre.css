@@ -288,8 +288,8 @@ code {
 
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+    background-color: #146ebd;
+    border-color: #1268b3;
 }
 
 .btn-success {
@@ -300,8 +300,8 @@ code {
 
 .btn-danger {
     color: #fff;
-    background-color: #d9534f;
-    border-color: #d43f3a;
+    background-color: #d8413c;
+    border-color: #c2342f;
 }
 
 .bt .btn-group-lg>.btn,

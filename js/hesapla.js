@@ -1,5 +1,5 @@
 function hesapla() {
-    var not1, harfnot, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15;
+    var not, not1, harfnot, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15;
     //parsefloat()
     s1 = document.getElementById('sinav1').value * 6; //matematik
     s2 = document.getElementById('sinav2').value * 2; //fizik
@@ -17,100 +17,145 @@ function hesapla() {
     s14 = document.getElementById('sinav14').value * 1; //demokrasi 
     s15 = document.getElementById('sinav15').value * 2; //din
 
-    not1 = (s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s11 + s12 + s13 + s14 + s15) / 37.0;
+    not = (s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s11 + s12 + s13 + s14 + s15) / 37.0;
+    not1 = not.toFixed(2);
 
-
-    if (document.getElementById('sinav1').value >= 00 && document.getElementById('sinav1').value < 50)
+    if (document.getElementById('sinav1').value >= 00 && document.getElementById('sinav1').value < 50) {
         document.getElementById('yüz').innerHTML = "Malesef Matematik 50 Altında olduğu için belge alamadınız!", //mat
-        harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav2').value >= 00 && document.getElementById('sinav2').value < 50)
+            harfnot = 'Zayıf Ders olduğu için belge alamadınız',
+            document.getElementById("sinav1").style.outline = "3px solid #eb0b0bfa",
+            document.getElementById('yüz').style.display = "block",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav1").style.outline = "0px";
+    }
+    if (document.getElementById('sinav2').value >= 00 && document.getElementById('sinav2').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız', //fizik
-        document.getElementById('yüz').innerHTML = "Malesef Fizik 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav3').value >= 00 && document.getElementById('sinav3').value < 50)
+            document.getElementById("sinav2").style.outline = "3px solid #eb0b0bfa",
+            document.getElementById('yüz').innerHTML = "Malesef Fizik 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav2").style.outline = "0px";
+    }
+    if (document.getElementById('sinav3').value >= 00 && document.getElementById('sinav3').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız ', //kimya
-        document.getElementById('yüz').innerHTML = "Malesef Kimya 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav4').value >= 00 && document.getElementById('sinav4').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Kimya 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block",
+            document.getElementById("sinav3").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav3").style.outline = "0px";
+    }
+    if (document.getElementById('sinav4').value >= 00 && document.getElementById('sinav4').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Biyoloji 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //biyo
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav5').value >= 00 && document.getElementById('sinav5').value < 50)
+            document.getElementById("sinav4").style.outline = "3px solid #eb0b0bfa",
+            document.getElementById('yüz').innerHTML = "Malesef Biyoloji 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //biyo
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav4").style.outline = "0px";
+    }
+    if (document.getElementById('sinav5').value >= 00 && document.getElementById('sinav5').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız', //edebiyat
-        document.getElementById('yüz').innerHTML = "Malesef Edebiyat 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav6').value >= 00 && document.getElementById('sinav6').value < 50)
+            document.getElementById("sinav5").style.outline = "3px solid #eb0b0bfa",
+            document.getElementById('yüz').innerHTML = "Malesef Edebiyat 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav5").style.outline = "0px";
+    }
+    if (document.getElementById('sinav6').value >= 00 && document.getElementById('sinav6').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız', //ing
-        document.getElementById('yüz').innerHTML = "Malesef İngilizce 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav7').value >= 00 && document.getElementById('sinav7').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef İngilizce 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block",
+            document.getElementById("sinav6").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav6").style.outline = "0px";
+    }
+    if (document.getElementById('sinav7').value >= 00 && document.getElementById('sinav7').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız', //almanaca
-        document.getElementById('yüz').innerHTML = "Malesef Almanca 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav8').value >= 00 && document.getElementById('sinav8').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Almanca 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000),
+            document.getElementById("sinav7").style.outline = "3px solid #eb0b0bfa";
+    } else {
+        document.getElementById("sinav7").style.outline = "0px";
+    }
+    if (document.getElementById('sinav8').value >= 00 && document.getElementById('sinav8').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız', //resim
-        document.getElementById('yüz').innerHTML = "Malesef Görsel/Müzik 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block",
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav9').value >= 00 && document.getElementById('sinav9').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Görsel/Müzik 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block",
+            document.getElementById("sinav8").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav8").style.outline = "0px";
+    }
+    if (document.getElementById('sinav9').value >= 00 && document.getElementById('sinav9').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Beden 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //beden
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav10').value >= 00 && document.getElementById('sinav10').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Beden 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //beden
+            document.getElementById("sinav9").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav9").style.outline = "0px";
+    }
+    if (document.getElementById('sinav10').value >= 00 && document.getElementById('sinav10').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Felsefe 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //felsefe
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav11').value >= 00 && document.getElementById('sinav11').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Felsefe 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //felsefe
+            document.getElementById("sinav10").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav10").style.outline = "0px";
+    }
+    if (document.getElementById('sinav11').value >= 00 && document.getElementById('sinav11').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Tarih 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //tarih
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav12').value >= 00 && document.getElementById('sinav12').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Tarih 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //tarih
+            document.getElementById("sinav11").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav11").style.outline = "0px";
+    }
+    if (document.getElementById('sinav12').value >= 00 && document.getElementById('sinav12').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Coğrafya 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //cog
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav13').value >= 00 && document.getElementById('sinav13').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Coğrafya 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //cog
+            document.getElementById("sinav12").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav12").style.outline = "0px";
+    }
+    if (document.getElementById('sinav13').value >= 00 && document.getElementById('sinav13').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Astronomi 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //astronomi
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav14').value >= 00 && document.getElementById('sinav14').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Astronomi 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //astronomi
+            document.getElementById("sinav13").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav13").style.outline = "0px";
+    }
+    if (document.getElementById('sinav14').value >= 00 && document.getElementById('sinav14').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Demokrosi 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //demok
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (document.getElementById('sinav15').value >= 00 && document.getElementById('sinav15').value < 50)
+            document.getElementById('yüz').innerHTML = "Malesef Demokrosi 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //demok
+            document.getElementById("sinav14").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav14").style.outline = "0px";
+    }
+    if (document.getElementById('sinav15').value >= 00 && document.getElementById('sinav15').value < 50) {
         harfnot = 'Zayıf Ders olduğu için belge alamadınız',
-        document.getElementById('yüz').innerHTML = "Malesef Din 50 Altında olduğu için belge alamadınız!",
-        document.getElementById('yüz').style.display = "block", //din
-        setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
-
-    else if (not1 >= 85 && not1 <= 100)
+            document.getElementById('yüz').innerHTML = "Malesef Din 50 Altında olduğu için belge alamadınız!",
+            document.getElementById('yüz').style.display = "block", //din
+            document.getElementById("sinav15").style.outline = "3px solid #eb0b0bfa",
+            setTimeout("document.getElementById('yüz').style.display = 'none'", 7000);
+    } else {
+        document.getElementById("sinav15").style.outline = "0px";
+    }
+    if (not1 >= 85 && not1 <= 100)
         harfnot = 'Tebrikler! Taktir belgesini Hak kazandınız!',
         document.getElementById('mesaj').style.display = "block",
         setTimeout("document.getElementById('mesaj').style.display = 'none'", 10000);

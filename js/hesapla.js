@@ -169,11 +169,11 @@ function hesapla() {
         setTimeout("document.getElementById('hic').style.display = 'none'", 9000);
 
     document.getElementById('mesaj').innerHTML = "Mükemmel " +
-        not1 + " puan ile Takdir Belgesini almaya hak kazandınız!";
+        not1 + " puan ile Takdir Belgesini almaya hak kazandınız✨";
     document.getElementById('hic').innerHTML = "Malesef " +
-        not1 + " puan ile BELGE alamadınız!";
+        not1 + " puan ile BELGE alamadınız✨";
     document.getElementById('tesekkür').innerHTML = "Aferin " +
-        not1 + " puan ile Teşekkür Belgesini almaya hak kazandınız!";
+        not1 + " puan ile Teşekkür Belgesini almaya hak kazandınız✨";
 
     document.getElementById('ortalama').innerText = not1;
     document.getElementById('txt').innerText = harfnot;

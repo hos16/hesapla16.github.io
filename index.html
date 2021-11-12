@@ -232,6 +232,27 @@
             right: 0;
             top: 330px;
         }
+        
+        div#txt {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            width: 175px;
+            height: 60px;
+            margin-left: 5px;
+            text-align: center;
+            cursor: none;
+            margin-bottom: 5px;
+        }
+        
+        div#ortalama {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            width: 175px;
+            height: 38px;
+            margin-left: 5px;
+            text-align: center;
+            cursor: none;
+        }
         /*----------------------------------------------------preloader son------------------------------------------*/
     </style>
 
@@ -301,8 +322,10 @@
                         <li id="demokrosi"><label for="demokrosipuan">Demokrosi :</label><input type="number" name="sinav14" id="sinav14" maxlength="4"><br/></li>
                         <li id="din"><label for="dinpuan">Din kültürü :</label><input type="number" name="sinav15" id="sinav15" maxlength="4"><br/></li>
 
-                        <li id="sonuc"><label for="sonucpuan">Ortalama :</label><input type="text" name="txtortalama" id="txtortalama" maxlength="0"><br/></li>
-                        <li id="sonuc"><label for="sonucpuan">Belge :</label><input type="text" name="txtharf" id="txtharf" maxlength="0"><br/></li>
+                        <li id="sonuc"><label for="sonucpuan">Ortalama :</label>
+                            <div name="ortalama" id="ortalama"><br/></li>
+                        <li id="sonuc"><label for="sonucpuan">Belge :</label>
+                            <div name="txt" id="txt"><br/></li>
                         <input type="button" onclick="hesapla();" value="Hesapla" />
                         <input type="reset" />
                     </ol>
@@ -344,41 +367,41 @@
             </div>
         </section>
 
-    </div>
+        </div>
 
-    <div class="copyright">
-        <p>Copyright © 2021 Oğuzhan Aktaş. All Right Reserved.</p>
-    </div>
+        <div class="copyright">
+            <p>Copyright © 2021 Oğuzhan Aktaş. All Right Reserved.</p>
+        </div>
 
-    <div id="mesaj">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div id="mesaj">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
-    </div>
-    <div id="tesekkür">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        </div>
+        <div id="tesekkür">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
-    </div>
-    <div id="hic">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        </div>
+        <div id="hic">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
-    </div>
-    <div id="yüz">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        </div>
+        <div id="yüz">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
-    </div>
+        </div>
 
-    <script>
-        var myVar;
+        <script>
+            var myVar;
 
-        function myFunction() {
-            myVar = setTimeout(showPage, 1500);
-        }
+            function myFunction() {
+                myVar = setTimeout(showPage, 1500);
+            }
 
-        function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("myDiv").style.display = "block";
-        }
-    </script>
+            function showPage() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("myDiv").style.display = "block";
+            }
+        </script>
 
 </body>
 

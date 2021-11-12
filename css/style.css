@@ -14,55 +14,55 @@ div#mesaj {
     background-color: #0ae967fa;
     color: white;
     padding-top: 50px;
-    width: 320px;
-    height: 160px;
+    width: 280px;
+    height: 140px;
     z-index: 999;
     border: solid 1px;
     border-color: transparent;
     border-radius: 14px 14px 14px 14px;
     position: fixed;
-    right: 20px;
+    right: 12px;
     top: 160px;
     z-index: 999px;
     display: none;
 }
 
 div#tesekkür {
-    background-color: #f0b30bfa;
+    background-color: #eec146fa;
     color: white;
     padding-top: 50px;
-    width: 320px;
-    height: 160px;
+    width: 280px;
+    height: 140px;
     z-index: 999;
     border: solid 1px;
     border-color: transparent;
     border-radius: 14px 14px 14px 14px;
     position: fixed;
-    right: 20px;
+    right: 12px;
     top: 160px;
     z-index: 999px;
     display: none;
 }
 
 div#yüz {
-    background-color: #eb0b0bfa;
+    background-color: #f04444fa;
     color: white;
     padding-top: 50px;
-    width: 320px;
-    height: 160px;
+    width: 280px;
+    height: 140px;
     z-index: 999;
     border: solid 1px;
     border-color: transparent;
     border-radius: 14px 14px 14px 14px;
     position: fixed;
-    right: 20px;
+    right: 12px;
     top: 160px;
     z-index: 999px;
     display: none;
 }
 
 div#hic {
-    background-color: #e60b0bfa;
+    background-color: #e63b3bfa;
     color: white;
     padding-top: 50px;
     width: 320px;

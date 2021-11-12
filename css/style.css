@@ -62,17 +62,17 @@ div#yüz {
 }
 
 div#hic {
-    background-color: #e63b3bfa;
+    background-color: #f04444fa;
     color: white;
     padding-top: 50px;
-    width: 320px;
-    height: 160px;
+    width: 280px;
+    height: 140px;
     z-index: 999;
     border: solid 1px;
     border-color: transparent;
     border-radius: 14px 14px 14px 14px;
     position: fixed;
-    right: 20px;
+    right: 12px;
     top: 160px;
     z-index: 999px;
     display: none;
@@ -419,5 +419,24 @@ p {
         align-items: center;
         align-content: center;
         margin-left: 270px;
+    }
+}
+
+@media(max-width:375) {
+    div#hic {
+        width: 200px;
+        height: 90px;
+    }
+    div#mesaj {
+        width: 200px;
+        height: 90px;
+    }
+    div#tesekkür {
+        width: 200px;
+        height: 90px;
+    }
+    div#yüz {
+        width: 200px;
+        height: 90px;
     }
 }

@@ -156,27 +156,27 @@ function hesapla() {
         document.getElementById("sinav15").style.outline = "0px";
     }
     if (not1 >= 85 && not1 <= 100)
-        harfnot = 'Tebrikler! Taktir belgesini Hak kazandınız!',
+        harfnot = 'Tebrikler! Takdir belgesini Hak kazandınız!',
         document.getElementById('mesaj').style.display = "block",
-        setTimeout("document.getElementById('mesaj').style.display = 'none'", 10000);
+        setTimeout("document.getElementById('mesaj').style.display = 'none'", 9000);
     else if (not1 >= 70 && not1 <= 85)
         harfnot = 'Tebrikler! Teşekkür belgesini Hak kazandınız!',
         document.getElementById('tesekkür').style.display = "block",
-        setTimeout("document.getElementById('tesekkür').style.display = 'none'", 10000);
+        setTimeout("document.getElementById('tesekkür').style.display = 'none'", 9000);
     else if (not1 >= 0 && not1 < 70)
-        harfnot = 'Malesef hiç bir belge kazanamadınız!',
+        harfnot = 'Malesef hiç belge kazanamadınız!',
         document.getElementById('hic').style.display = "block",
-        setTimeout("document.getElementById('hic').style.display = 'none'", 10000);
+        setTimeout("document.getElementById('hic').style.display = 'none'", 9000);
 
-    document.getElementById('mesaj').innerHTML = "Aferin " +
-        not1 + " puan ile Taktir Belgesini almaya hak kazandınız!";
+    document.getElementById('mesaj').innerHTML = "Mükemmel " +
+        not1 + " puan ile Takdir Belgesini almaya hak kazandınız!";
     document.getElementById('hic').innerHTML = "Malesef " +
-        not1 + " puan ile HİÇ BELGE alamadınız!";
+        not1 + " puan ile BELGE alamadınız!";
     document.getElementById('tesekkür').innerHTML = "Aferin " +
         not1 + " puan ile Teşekkür Belgesini almaya hak kazandınız!";
 
-    document.getElementById('txtortalama').value = not1;
-    document.getElementById('txtharf').value = harfnot;
+    document.getElementById('ortalama').innerText = not1;
+    document.getElementById('txt').innerText = harfnot;
 
 
 }

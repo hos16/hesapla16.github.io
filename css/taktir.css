@@ -115,6 +115,7 @@ form.hnarac>fieldset>ol>li {
 input {
     width: 175px;
     height: 35px;
+    text-align: center;
 }
 
 input:focus {
@@ -123,25 +124,26 @@ input:focus {
 }
 
 input[type=button] {
-    background-color: red;
+    background-color: #00bcd4;
     color: #ffffff;
     width: 120px;
     height: 40px;
-    float: right;
     border-radius: 6px;
-    border: white;
+    border: transparent;
     cursor: pointer;
+    float: right;
 }
 
 input[type=reset] {
-    background-color: rgb(153, 221, 204);
-    color: #000000;
+    background-color: rgb(228, 154, 154);
+    color: #ffffff;
     width: 120px;
     height: 40px;
     float: left;
     border-radius: 6px;
-    border: rgb(7, 7, 7);
+    border: transparent;
     cursor: pointer;
+    margin-left: 1px;
 }
 
 ol {

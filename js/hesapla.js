@@ -155,18 +155,48 @@ function hesapla() {
     } else {
         document.getElementById("sinav15").style.outline = "0px";
     }
-    if (not1 >= 85 && not1 <= 100)
-        harfnot = 'Tebrikler! Takdir belgesini Hak kazandınız!',
-        document.getElementById('mesaj').style.display = "block",
-        setTimeout("document.getElementById('mesaj').style.display = 'none'", 9000);
-    else if (not1 >= 70 && not1 <= 85)
-        harfnot = 'Tebrikler! Teşekkür belgesini Hak kazandınız!',
-        document.getElementById('tesekkür').style.display = "block",
-        setTimeout("document.getElementById('tesekkür').style.display = 'none'", 9000);
-    else if (not1 >= 0 && not1 < 70)
-        harfnot = 'Malesef hiç belge kazanamadınız!',
-        document.getElementById('hic').style.display = "block",
-        setTimeout("document.getElementById('hic').style.display = 'none'", 9000);
+
+    if (not1 >= 85 && not1 <= 100) {
+        if (document.getElementById('sinav1').value >= 50 && document.getElementById('sinav2').value >= 50 &&
+            document.getElementById('sinav3').value >= 50 && document.getElementById('sinav4').value >= 50 &&
+            document.getElementById('sinav5').value >= 50 && document.getElementById('sinav6').value >= 50 &&
+            document.getElementById('sinav7').value >= 50 && document.getElementById('sinav8').value >= 50 &&
+            document.getElementById('sinav9').value >= 50 && document.getElementById('sinav10').value >= 50 &&
+            document.getElementById('sinav11').value >= 50 && document.getElementById('sinav12').value >= 50 &&
+            document.getElementById('sinav13').value >= 50 && document.getElementById('sinav14').value >= 50 &&
+            document.getElementById('sinav15').value >= 50) {
+            harfnot = 'Tebrikler! Takdir belgesini Hak kazandınız!',
+                document.getElementById('mesaj').style.display = "block",
+                setTimeout("document.getElementById('mesaj').style.display = 'none'", 7000);
+        }
+    } else if (not1 >= 70 && not1 <= 85) {
+        if (document.getElementById('sinav1').value >= 50 && document.getElementById('sinav2').value >= 50 &&
+            document.getElementById('sinav3').value >= 50 && document.getElementById('sinav4').value >= 50 &&
+            document.getElementById('sinav5').value >= 50 && document.getElementById('sinav6').value >= 50 &&
+            document.getElementById('sinav7').value >= 50 && document.getElementById('sinav8').value >= 50 &&
+            document.getElementById('sinav9').value >= 50 && document.getElementById('sinav10').value >= 50 &&
+            document.getElementById('sinav11').value >= 50 && document.getElementById('sinav12').value >= 50 &&
+            document.getElementById('sinav13').value >= 50 && document.getElementById('sinav14').value >= 50 &&
+            document.getElementById('sinav15').value >= 50) {
+            harfnot = 'Tebrikler! Teşekkür belgesini Hak kazandınız!',
+                document.getElementById('tesekkür').style.display = "block",
+                setTimeout("document.getElementById('tesekkür').style.display = 'none'", 7000);
+        }
+
+    } else if (not1 >= 0 && not1 < 70) {
+        if (document.getElementById('sinav1').value >= 50 && document.getElementById('sinav2').value >= 50 &&
+            document.getElementById('sinav3').value >= 50 && document.getElementById('sinav4').value >= 50 &&
+            document.getElementById('sinav5').value >= 50 && document.getElementById('sinav6').value >= 50 &&
+            document.getElementById('sinav7').value >= 50 && document.getElementById('sinav8').value >= 50 &&
+            document.getElementById('sinav9').value >= 50 && document.getElementById('sinav10').value >= 50 &&
+            document.getElementById('sinav11').value >= 50 && document.getElementById('sinav12').value >= 50 &&
+            document.getElementById('sinav13').value >= 50 && document.getElementById('sinav14').value >= 50 &&
+            document.getElementById('sinav15').value >= 50) {
+            harfnot = 'Malesef hiç belge kazanamadınız!',
+                document.getElementById('hic').style.display = "block",
+                setTimeout("document.getElementById('hic').style.display = 'none'", 7000);
+        }
+    }
 
     document.getElementById('mesaj').innerHTML = "Mükemmel " +
         not1 + " puan ile Takdir Belgesini almaya hak kazandınız✨";

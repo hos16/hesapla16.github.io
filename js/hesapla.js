@@ -211,6 +211,7 @@ function hesapla() {
 
 }
 
+
 function notifyMe() {
     var notification;
     if (!("Notification" in window)) {

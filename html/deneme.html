@@ -304,13 +304,9 @@
                 colors: colors,
             });
 
-
-            if (Date.now() < Date.now() + 1600) {
-                requestAnimationFrame(frame);
-            }
+            requestAnimationFrame(frame);
         }
-
-        window.onload = frame();
+        frame();
     </script>
 
 </body>

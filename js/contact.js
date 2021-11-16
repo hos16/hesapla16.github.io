@@ -10,6 +10,8 @@ var firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+
+
 var messagesRef = firebase.database().ref('messages');
 
 document.getElementById('contactFormm').addEventListener('submit', submitForm);

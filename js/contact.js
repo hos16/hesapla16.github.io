@@ -8,7 +8,7 @@ const firebaseConfig = {
     appId: "1:357652926945:web:aad79d308ab1e6ce1a82a0"
 };
 
-firebaseConfig.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 
 var contactFormDB = firebase.database().ref("contactFormm");

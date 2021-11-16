@@ -1,12 +1,14 @@
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDiQnGQkqgbEKeHLsFjdhnok9nDOeFSkSw",
     authDomain: "hesapla-55a9f.firebaseapp.com",
+    databaseURL: "https://hesapla-55a9f-default-rtdb.firebaseio.com",
     projectId: "hesapla-55a9f",
     storageBucket: "hesapla-55a9f.appspot.com",
     messagingSenderId: "548914278681",
     appId: "1:548914278681:web:31b6e474caf78022d8d588",
     measurementId: "G-CD1RZL5CGE"
 };
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 

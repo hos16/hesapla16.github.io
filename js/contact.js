@@ -7,7 +7,8 @@ var firebaseConfig = {
     appId: "1:548914278681:web:31b6e474caf78022d8d588",
     measurementId: "G-CD1RZL5CGE"
 };
-firebase.initializeApp(config);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');

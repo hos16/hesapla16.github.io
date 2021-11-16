@@ -1,6 +1,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyDXcaAcyzEztXUGGqNPi9f_fzqpb1ABKDA",
     authDomain: "takdir-e9cda.firebaseapp.com",
+    databaseURL: "https://takdir-e9cda-default-rtdb.firebaseio.com",
     projectId: "takdir-e9cda",
     storageBucket: "takdir-e9cda.appspot.com",
     messagingSenderId: "357652926945",
@@ -8,7 +9,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 var messagesRef = firebase.database().ref('messages');
 

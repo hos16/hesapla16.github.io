@@ -1,16 +1,14 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDiQnGQkqgbEKeHLsFjdhnok9nDOeFSkSw",
-    authDomain: "hesapla-55a9f.firebaseapp.com",
-    databaseURL: "https://hesapla-55a9f-default-rtdb.firebaseio.com",
-    projectId: "hesapla-55a9f",
-    storageBucket: "hesapla-55a9f.appspot.com",
-    messagingSenderId: "548914278681",
-    appId: "1:548914278681:web:31b6e474caf78022d8d588",
-    measurementId: "G-CD1RZL5CGE"
+    apiKey: "AIzaSyDXcaAcyzEztXUGGqNPi9f_fzqpb1ABKDA",
+    authDomain: "takdir-e9cda.firebaseapp.com",
+    projectId: "takdir-e9cda",
+    storageBucket: "takdir-e9cda.appspot.com",
+    messagingSenderId: "357652926945",
+    appId: "1:357652926945:web:aad79d308ab1e6ce1a82a0"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 var messagesRef = firebase.database().ref('messages');
 

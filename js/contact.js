@@ -11,7 +11,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var messagesRef = firebase.database().ref('messages');
+const messagesRef = firebase.database().ref('messages');
 
 document.getElementById('contactFormm').addEventListener('submit', submitForm);
 

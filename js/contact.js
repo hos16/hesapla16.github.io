@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDiQnGQkqgbEKeHLsFjdhnok9nDOeFSkSw",
     authDomain: "hesapla-55a9f.firebaseapp.com",
@@ -10,6 +13,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 
 var messagesRef = firebase.database().ref('messages');

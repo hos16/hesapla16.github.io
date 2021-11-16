@@ -8,48 +8,48 @@ const firebaseConfig = {
     appId: "1:357652926945:web:aad79d308ab1e6ce1a82a0"
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const messagesRef = firebase.database().ref('messages');
 
-document.getElementById('contactFormm').addEventListener('submit', submitForm);
+var contactFormDB = firebase.database().ref("contactFormm");
+
+document.getElementById("contactFormm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
     e.preventDefault();
 
-    var isim = getInputVal('isim');
-    var soyisim = getInputVal('soyisim');
-    var email = getInputVal('email');
-    var tel = getInputVal('tel');
-    var mesaj = getInputVal('mesaj');
+    var isim = getElementVal("isim");
+    var soyisim = getElementVal("soyisim");
+    var email = getElementVal("email");
+    var tel = getElementVal("tel");
+    var mesaj = getElementVal("mesaj");
 
-    saveMessage(isim, soyisim, email, tel, mesaj);
-
-
-    //  document.querySelector('.alert').style.display = 'block';
+    saveMessages(isim, soyisim, email, tel, mesaj);
 
 
-    //  setTimeout(function() {
-    //      document.querySelector('.alert').style.display = 'none';
+    //  document.querySelector(".alert").style.display = "block";
+
+
+    //  setTimeout(() => {
+    //   document.querySelector(".alert").style.display = "none";
     // }, 3000);
 
-    document.getElementById('contactFormm').reset();
+
+    document.getElementById("contactFormm").reset();
 }
 
+const saveMessages = (isim, soyisim, email, tel, mesaj) => {
+    var newContactForm = contactFormDB.push();
 
-function getInputVal(id) {
-    return document.getElementById(id).value;
-}
-
-
-function saveMessage(isim, soyisim, email, tel, mesaj) {
-    var newMessageRef = messagesRef.push();
-    newMessageRef.set({
+    newContactForm.set({
         isim: isim,
         soyisim: soyisim,
         email: email,
         tel: tel,
         mesaj: mesaj
     });
-}
+};
+
+const getElementVal = (id) => {
+    return document.getElementById(id).value;
+};

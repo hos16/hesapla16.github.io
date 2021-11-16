@@ -10,24 +10,19 @@ var firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Reference messages collection
 var messagesRef = firebase.database().ref('messages');
 
-// Listen for form submit
 document.getElementById('contactFormm').addEventListener('submit', submitForm);
 
-// Submit form
 function submitForm(e) {
     e.preventDefault();
 
-    // Get values
     var isim = getInputVal('isim');
     var soyisim = getInputVal('soyisim');
     var email = getInputVal('email');
     var tel = getInputVal('tel');
     var mesaj = getInputVal('mesaj');
 
-    // Save message
     saveMessage(isim, soyisim, email, tel, mesaj);
 
 
@@ -38,16 +33,15 @@ function submitForm(e) {
     //      document.querySelector('.alert').style.display = 'none';
     // }, 3000);
 
-    // Clear form
     document.getElementById('contactFormm').reset();
 }
 
-// Function to get get form values
+
 function getInputVal(id) {
     return document.getElementById(id).value;
 }
 
-// Save message to firebase
+
 function saveMessage(isim, soyisim, email, tel, mesaj) {
     var newMessageRef = messagesRef.push();
     newMessageRef.set({

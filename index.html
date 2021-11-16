@@ -337,26 +337,26 @@
                 <h1>İletişim</h1>
                 <p>Öneri ve Görüşleriniz için bana ulaşın.</p>
             </div>
-            <div class="contactForm">
-                <div class="row">
+            <form id="contactFormm">
+                <div class="contactForm">
                     <div class="col50">
-                        <input type="text" name="" placeholder="İsim">
+                        <input type="text" name="isim" id="isim" placeholder="İsim">
                     </div>
                     <div class="col50">
-                        <input type="text" name="" placeholder="Soyisim">
+                        <input type="text" name="soyisim" id="soyisim" placeholder="Soyisim">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col50">
-                        <input type="text" name="" placeholder="Email">
+                        <input type="text" name="email" id="email" placeholder="Email">
                     </div>
                     <div class="col50">
-                        <input type="text" name="" placeholder="Tel. numarası">
+                        <input type="text" name="tel" id="tel" placeholder="Tel. numarası">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col100">
-                        <textarea placeholder="Mesaj"></textarea>
+                        <textarea name="mesaj" id="mesaj" placeholder="Mesaj"></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -364,7 +364,9 @@
                         <input type="submit" value="Gönder">
                     </div>
                 </div>
-            </div>
+                </div>
+                <script src="js/contact.js"></script>
+            </form>
         </section>
 
         </div>
@@ -402,9 +404,12 @@
                 document.getElementById("myDiv").style.display = "block";
             }
         </script>
-        <script>
-            const player = document.querySelector("#oynatici1").play();
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyDiQnGQkqgbEKeHLsFjdhnok9nDOeFSkSw",
+            authDomain: "hesapla-55a9f.firebaseapp.com", projectId: "hesapla-55a9f", storageBucket: "hesapla-55a9f.appspot.com", messagingSenderId: "548914278681", appId: "1:548914278681:web:31b6e474caf78022d8d588", measurementId: "G-CD1RZL5CGE" }; const
+            app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);
         </script>
+
 </body>
 
 

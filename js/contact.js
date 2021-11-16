@@ -13,7 +13,8 @@ firebase.initializeApp(firebaseConfig);
 
 var contactFormDB = firebase.database().ref("contactFormm");
 
-document.getElementById("contactFormm").addEventListener("submit", submitForm);
+//document.getElementById("contactFormm").addEventListener("submit", submitForm);
+document.getElementById("submit").addEventListener("submit", submitForm);
 
 function submitForm(e) {
     e.preventDefault();

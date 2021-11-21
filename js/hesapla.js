@@ -198,7 +198,7 @@ function hesapla() {
         }
     }
 
-    document.getElementById('mesaj').innerHTML = "Mükemmel " +
+    document.getElementById('takdir').innerHTML = "Mükemmel " +
         not1 + " puan ile Takdir Belgesini almaya hak kazandınız✨";
     document.getElementById('hic').innerHTML = "Malesef " +
         not1 + " puan ile BELGE alamadınız✨";

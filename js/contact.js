@@ -27,13 +27,11 @@ function submitForm(e) {
 
     saveMessages(isim, soyisim, email, tel, mesaj);
 
+    document.querySelector(".success_message").style.display = "block";
 
-    //  document.querySelector(".alert").style.display = "block";
-
-
-    //  setTimeout(() => {
-    //   document.querySelector(".alert").style.display = "none";
-    // }, 3000);
+    setTimeout(() => {
+        document.querySelector(".success_message").style.display = "none";
+    }, 6000);
 
 
     document.getElementById("contactFormm").reset();

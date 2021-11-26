@@ -325,6 +325,25 @@ p {
     font-size: 16px;
 }
 
+#success_message {
+    background-color: rgb(13, 221, 93);
+    color: rgb(231, 229, 226);
+    padding: 7px;
+    border-radius: 3px;
+    max-height: 40px;
+    animation: loading 4s normal;
+    display: none;
+}
+
+@keyframes loading {
+    0% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
 @media(max-width:1110px) {
     .banner .imgSidebar {
         display: none;
@@ -377,7 +396,16 @@ p {
     }
 }
 
+@media(max-width:850px) {
+    #success_message {
+        max-height: 150px;
+    }
+}
+
 @media(max-width: 705px) {
+    #success_message {
+        max-height: 150px;
+    }
     .contact .contactForm .row .col50 {
         width: 70%;
         align-items: center;

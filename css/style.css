@@ -200,8 +200,8 @@ p {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
+    margin: 7px;
     letter-spacing: 1px;
-    margin-bottom: 25px;
 }
 
 .title {
@@ -450,21 +450,21 @@ p {
     }
 }
 
-@media(max-width:375) {
+@media(max-width:385) {
     div#hic {
-        width: 200px;
+        width: 190px;
         height: 90px;
     }
     div#mesaj {
-        width: 200px;
+        width: 190px;
         height: 90px;
     }
     div#tesekkür {
-        width: 200px;
+        width: 190px;
         height: 90px;
     }
     div#yüz {
-        width: 200px;
+        width: 190px;
         height: 90px;
     }
 }

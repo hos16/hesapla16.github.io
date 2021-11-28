@@ -51,7 +51,6 @@ form.hnarac>fieldset>ol>li>label {
     font-weight: bold;
     min-width: 150px;
     white-space: nowrap;
-    cursor: auto;
     margin-left: 350px;
 }
 
@@ -112,7 +111,7 @@ form.hnarac>fieldset>ol>li {
 
 /*-----------------------------10.sınıf taktir teşekkür hesaplama input boyutları------------------------------------------------*/
 
-input {
+input[type=number] {
     width: 175px;
     height: 35px;
     text-align: center;
@@ -149,4 +148,251 @@ input[type=reset] {
 ol {
     background-color: rgb(77, 75, 75);
     color: #fff;
+}
+
+div#txt {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    width: 175px;
+    height: 65px;
+    margin-left: 5px;
+    text-align: center;
+    cursor: none;
+    margin-bottom: 5px;
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+div#ortalama {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    width: 175px;
+    height: 38px;
+    margin-left: 5px;
+    text-align: center;
+    cursor: none;
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+@media(max-width:460px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -15px;
+    }
+    input[type=number] {
+        width: 155px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 155px;
+        margin-left: 134px;
+    }
+    div#txt {
+        width: 155px;
+        margin-left: 134px;
+    }
+}
+
+@media(max-width:421px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -25px;
+    }
+    input[type=number] {
+        width: 145px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 145px;
+        margin-left: 124px;
+    }
+    div#txt {
+        width: 145px;
+        margin-left: 124px;
+    }
+}
+
+@media(max-width:401px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -32px;
+    }
+    input[type=number] {
+        width: 140px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 140px;
+        margin-left: 117px;
+    }
+    div#txt {
+        width: 140px;
+        height: 75px;
+        margin-left: 117px;
+    }
+}
+
+@media(max-width:389px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -32px;
+    }
+    input[type=number] {
+        width: 125px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 125px;
+        margin-left: 117px;
+    }
+    div#txt {
+        width: 125px;
+        height: 98px;
+        margin-left: 117px;
+    }
+}
+
+@media(max-width:374px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -32px;
+    }
+    input[type=number] {
+        width: 110px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 110px;
+        margin-left: 117px;
+    }
+    div#txt {
+        width: 110px;
+        height: 98px;
+        margin-left: 117px;
+    }
+}
+
+@media(max-width:361px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -48px;
+    }
+    input[type=number] {
+        width: 100px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 100px;
+        margin-left: 100px;
+    }
+    div#txt {
+        width: 100px;
+        height: 107px;
+        margin-left: 100px;
+    }
+    input[type=button] {
+        background-color: #00bcd4;
+        color: #ffffff;
+        width: 110px;
+        height: 40px;
+        border-radius: 6px;
+        border: transparent;
+        cursor: pointer;
+        float: right;
+    }
+    input[type=reset] {
+        background-color: rgb(228, 154, 154);
+        color: #ffffff;
+        width: 110px;
+        height: 40px;
+        float: left;
+        border-radius: 6px;
+        border: transparent;
+        cursor: pointer;
+        margin-left: 1px;
+    }
+}
+
+@media(max-width:333px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -48px;
+    }
+    input[type=number] {
+        width: 85px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 85px;
+        margin-left: 100px;
+    }
+    div#txt {
+        width: 85px;
+        height: 107px;
+        margin-left: 100px;
+    }
+    input[type=button] {
+        background-color: #00bcd4;
+        color: #ffffff;
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        border: transparent;
+        cursor: pointer;
+        float: right;
+    }
+    input[type=reset] {
+        background-color: rgb(228, 154, 154);
+        color: #ffffff;
+        width: 100px;
+        height: 40px;
+        float: left;
+        border-radius: 6px;
+        border: transparent;
+        cursor: pointer;
+        margin-left: 1px;
+    }
+}
+
+@media(max-width:318px) {
+    form.hnarac>fieldset>ol>li input[type=number],
+    form.hnarac>fieldset>ol>li input[type=text],
+    form.hnarac>fieldset>ol>li textarea,
+    form.hnarac>fieldset>ol>li select {
+        margin-left: -48px;
+    }
+    input[type=number] {
+        width: 80px;
+        height: 35px;
+        text-align: center;
+    }
+    div#ortalama {
+        width: 80px;
+        margin-left: 100px;
+    }
+    div#txt {
+        width: 80px;
+        height: 107px;
+        margin-left: 100px;
+    }
 }
